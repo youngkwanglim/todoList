@@ -7,13 +7,14 @@ import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
 @Getter
-public class CreateTodoRequest {
+public class UpdateTodoRequest {
 
-    @NotBlank(message = "할 일은 꼭 작성해 주셔야 합니다.")
+    private Long todoId;
+
+    @NotBlank(message = "수정할 할 일은 있어야 합니다.")
     private String content;
 
     private Date deadLine;
 
     private CategoryType category;
-
 }
